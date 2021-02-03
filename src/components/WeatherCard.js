@@ -1,9 +1,10 @@
-const WeatherCard = () => {
+const WeatherCard = (props) => {
+  let data=props.data.data;
   return (
     <div>
       <h3>SATURDAY, 16:00</h3>
-      <p>Beautiful Sunshine</p>
-      <h1 className="">21 &#176;C</h1>
+      <p></p>
+      <h1 className="">{} &#176;C</h1>
       <div className="flex">
         <div>
           <span></span>

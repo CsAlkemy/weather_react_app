@@ -1,4 +1,5 @@
-const WeatherDetails = () => {
+const WeatherDetails = (props) => {
+
   return (
     <div>
       <h1>Weather Report</h1>
@@ -32,6 +33,3 @@ const WeatherDetails = () => {
 };
 
 export default WeatherDetails;
-
-
-
