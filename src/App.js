@@ -5,10 +5,11 @@ import { API_KEY, URL } from "./apis/config";
 import WeatherCard from "./components/WeatherCard";
 import WeatherDetails from "./components/WeatherDetails";
 import Loader from "../src/image/partly-cloudy-day-rain.svg";
-import ReactIC from '../src/image/react.png';
-import TailwindIC from '../src/image/tailwindcss.svg';
-import WeatherIc from '../src/image/weather.svg';
-import Axioss from '../src/image/axios.svg'
+import ReactIC from "../src/image/react.png";
+import TailwindIC from "../src/image/tailwindcss.svg";
+import WeatherIc from "../src/image/weather.svg";
+import Axioss from "../src/image/axios.svg";
+import Love from "../src/image/love.svg";
 
 function App() {
   const { data, error, isLoading, setUrl } = useFetch();
@@ -48,12 +49,16 @@ function App() {
           </div>
         </div>
         <div className="flex max-w-lg p-5 md:p-16 mx-auto">
-          <img  className='h-7 mx-auto ' src={ReactIC} alt="a"/>
-          <img  className='h-7  mx-auto' src={TailwindIC} alt="a"/>
-          <img  className='h-7 mx-auto' src={WeatherIc} alt="a"/>
-          <img  className='h-7  mx-auto' src={Axioss} alt="a"/>
+          <img className="h-7 mx-auto " src={ReactIC} alt="a" />
+          <img className="h-7  mx-auto" src={TailwindIC} alt="a" />
+          <img className="h-7 mx-auto" src={WeatherIc} alt="a" />
+          <img className="h-7  mx-auto" src={Axioss} alt="a" />
         </div>
-        
+        <div className="flex max-w-lg -p-2 mx-auto">
+          <p className="text-xs font-thin text-white mx-auto">
+            <a href="http://alkemyme.netlify.app/">@alkemy</a>
+          </p>
+        </div>
       </>
     );
   };
