@@ -33,7 +33,7 @@ const SearchLoc = ({ onSearch }) => {
         className="bg-purple-600 pr-2 pl-2 text-base text-white rounded-lg ml-2"
         onClick={() => onSearch(city)}
       >
-        CHECK
+        Check
       </button>
     </div>
   );
