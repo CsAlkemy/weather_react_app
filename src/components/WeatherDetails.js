@@ -8,9 +8,14 @@ const WeatherDetails = (weathers) => {
   let linkImg = `http://openweathermap.org/img/wn/${tempo.weather[0].icon}@2x.png`;
 
 
-  //TimeStamp to 12h base time
-  var date= new Date(tempo.sys.sunrise*1000);
-  console.log(date.getTime());
+  //TimeStamp to time convert
+  let timeConvert=(timeStamp)=>{
+    let dateObj= new Date(timeStamp*1000);
+    let utcString = dateObj.toUTCString();
+    let time=utcString.slice(-12, -7);
+    return time;
+  };
+  console.log(timeConvert(tempo.sys.sunrise));
 
   return (
     <div className='m-1'>
@@ -38,21 +43,21 @@ const WeatherDetails = (weathers) => {
         <div className='flex-col  mx-auto'>
           <img  className='h-9 md:h-12' src={rise} alt="sunrise"/>
           <p className='text-gray-500'>Sunrise</p>
-          <p>9:20Am</p>
+          <p>{timeConvert(tempo.sys.sunrise)}</p>
         </div>
         <div className='flex-col  mx-auto'>
           <img className='h-9 md:h-12' src={sunSet} alt="sunset"/>
           <p className='text-gray-500'>Sunset</p>
-          <p>5:20Am</p>
+          <p>{timeConvert(tempo.sys.sunset)}</p>
         </div>
         <div className='flex-col  mx-auto'>
           <img  className='h-9 md:h-12' src={hot} alt="hot"/>
-          <p className='text-gray-500'>Max Temp</p>
+          <p className='text-gray-500'>High</p>
           <p>{tempo.main.temp_max}&#176;C</p>
         </div>
         <div className='flex-col  mx-auto'>
           <img className='h-9 md:h-12' src={cold} alt="cold"/>
-          <p className='text-gray-500'>Min Temp</p>
+          <p className='text-gray-500'>Low</p>
           <p>{tempo.main.temp_min}&#176;C</p>
         </div>
       </div>

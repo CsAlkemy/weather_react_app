@@ -6,11 +6,19 @@ import WeatherCard from "./components/WeatherCard";
 import WeatherDetails from "./components/WeatherDetails";
 
 function App() {
-  const { data, error, isLoading, setUrl } = useFetch();
+  const { data, error,  setUrl } = useFetch();
 
   const getContent = () => {
-    if (error) return <h1>Error when featching: {error}</h1>;
-    if (!data && isLoading) return <h2>Loading..</h2>;
+    if (error)
+      return (
+        <div
+          className="bg-pink-200 border-l-4 border- rounded  border-red-600 mt-10 pt-4 pb-4 "
+          role="alert"
+        >
+          <h1 className='ml-5 pl-4'>Error when featching: {error}</h1>
+          <p className='ml-5 pl-4 text-sm font-thin'>Please re-check your city and Search again.. </p>
+        </div>
+      );
     if (!data) return null;
     return (
       <>
