@@ -9,7 +9,6 @@ import ReactIC from "../src/image/react.png";
 import TailwindIC from "../src/image/tailwindcss.svg";
 import WeatherIc from "../src/image/weather.svg";
 import Axioss from "../src/image/axios.svg";
-import Love from "../src/image/love.svg";
 
 function App() {
   const { data, error, isLoading, setUrl } = useFetch();
