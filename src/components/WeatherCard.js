@@ -2,7 +2,7 @@ import { GiWaterDrop, GiWindsock } from "react-icons/gi";
 
 const WeatherCard = (weathers) => {
   let tempo = weathers.weathers;
-  let linkImg = `http://openweathermap.org/img/wn/${tempo.weather[0].icon}@2x.png`;
+  let linkImg = `https://openweathermap.org/img/wn/${tempo.weather[0].icon}@2x.png`;
 
   const date = new Date();
   var weekday = new Array(7);

@@ -5,7 +5,7 @@ import cold from '../image/cold.png'
 
 const WeatherDetails = (weathers) => {
   let tempo = weathers.weathers;
-  let linkImg = `http://openweathermap.org/img/wn/${tempo.weather[0].icon}@2x.png`;
+  let linkImg = `https://openweathermap.org/img/wn/${tempo.weather[0].icon}@2x.png`;
 
 
   //TimeStamp to time convert
