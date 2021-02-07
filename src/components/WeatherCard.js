@@ -16,7 +16,7 @@ const WeatherCard = (weathers) => {
 
   var day = weekday[date.getDay()];
   return (
-    <div className='m-1'>
+    <div className="m-1">
       <div className="flex">
         <div>
           <h1 className="text-5xl mt-3 mb-1 text-gray-600">{tempo.name}</h1>
@@ -50,7 +50,10 @@ const WeatherCard = (weathers) => {
       <span className="text-xs m-0">
         feels like {Math.floor(tempo.main.feels_like)} &#176;C
       </span>
-      <p className='text-xs text-justify mt-2'>All great and beautiful work has come of first gazing without shrinking into the darkness.</p>
+      <p className="text-xs text-justify mt-2">
+        All great and beautiful work has come of first gazing without shrinking
+        into the darkness.
+      </p>
       <div></div>
       <button className="bg-purple-600 border-none text-white rounded-md mb-5 mt-7  p-2  w-full">
         Next Week

@@ -1,15 +1,6 @@
 import React, { useState } from "react";
 
 const SearchLoc = ({ onSearch }) => {
-  // const [query, setQuery] = useState("");
-  // const [weather, setWeather] = useState({});
-  // console.log(query, weather);
-  // const onSearch = async (e) => {
-  //   const data = await fetchWeather(query);
-  //   setWeather(data);
-  //   setQuery("");
-  // };
-
   const [city, setCity] = useState("");
   console.log(city);
   return (
