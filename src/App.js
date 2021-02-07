@@ -53,7 +53,7 @@ function App() {
           <img className="h-7 mx-auto" src={WeatherIc} alt="a" />
           <img className="h-7  mx-auto" src={Axioss} alt="a" />
         </div>
-        <div className="flex max-w-lg -p-2 mx-auto">
+        <div className="flex max-w-lg -p-2 mx-auto mb-5">
           <p className="text-xs font-thin text-white mx-auto">
             <a href="http://alkemyme.netlify.app/">@alkemy</a>
           </p>
